@@ -57,31 +57,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [Container(
-            width: 375,
-            height: 300,
-            child: TextField(
-              decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(11),
-                    borderSide: BorderSide(
-                  color: Colors.white,
-                      width: 2
-              )
-              ),
-                enabledBorder: OutlineInputBorder(
-    borderRadius: BorderRadius.circular(11),
-    borderSide: BorderSide(
-    color: Colors.black,
-    width: 2
-               )
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
 
-            ))),
 
-        ),
+            Container(
+              padding: new EdgeInsets.only(left: 20,right: 20,bottom: 32,top: 0),
+               height: 70,
+              width :450,
+
+              child:  ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                  ),
+                  onPressed:(){
+                    child:Text("pressed");
+                  }, child: Text("Tap here ")),
+            )
+
+
       ]
         ),
     );
