@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.red[200],
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
         useMaterial3: true,
       ),
@@ -57,30 +58,57 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
+        body:
+
+        Container(
+        width: 450,
+        height: 762,
+        color: Colors.teal,
+
+        //decoration: BoxDecoration(
+       // image: DecorationImage(
+          //  image: AssetImage("assets/images/bulb.jpg"),
+       // fit: BoxFit.cover)),
+           child: Column(
+             mainAxisAlignment:MainAxisAlignment.end,
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              Padding(padding: EdgeInsets.only(top: 30, bottom: 0,left: 30,right: 30),
+               child :Container(
+                  width: 460,
+                  height: 632,
+                  color: Colors.redAccent,
+                ),),
+               Container(
+                 width: 450,
+                 height: 100,
+                 child:Padding(padding: EdgeInsets.only(top: 30 ,bottom: 30,left: 10,right: 10),
+                 child:  ElevatedButton(
+
+                     style: ButtonStyle(
+                       backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+
+                     ),
+                     onPressed:(){
+                       child:Text("pressed");
+                     }, child: Text("Tap here ")),
+                 )
+               )
+
+             ],
 
 
-            Container(
-              padding: new EdgeInsets.only(left: 20,right: 20,bottom: 32,top: 0),
-               height: 70,
-              width :450,
-
-              child:  ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
-                  ),
-                  onPressed:(){
-                    child:Text("pressed");
-                  }, child: Text("Tap here ")),
-            )
 
 
-      ]
-        ),
+               ),
+            ),
+
+
+
+
+
     );
+
 
   }
 }
