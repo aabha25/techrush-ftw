@@ -21,7 +21,8 @@ class MyApp2 extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        Column(
+          SingleChildScrollView(
+        child:Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -137,7 +138,7 @@ class MyApp2 extends StatelessWidget{
 
             Padding(padding: EdgeInsets.only(top: 20, bottom: 10,left: 0,right: 0),
                 child: Container(
-                    height: 60,
+                    height: 30,
                     width: 300,
                     // color: Colors.white,
                     child: Text("SAVORY",style: TextStyle(color: Colors.teal,fontSize: 25),)
@@ -253,7 +254,7 @@ class MyApp2 extends StatelessWidget{
             ),
             Row(children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10 , top: 30),
+                padding: const EdgeInsets.only(left: 20 , top: 30),
                 child: Container(
                     height: 90,
                     width: 70,
@@ -265,17 +266,74 @@ class MyApp2 extends StatelessWidget{
                 ),
               ),
 
+               Padding(
+                padding: const EdgeInsets.only(left: 90,top:20),
+                child: Container(
+                    height: 95,
+                    width: 95,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/garlic.png"),
+                            fit: BoxFit.cover))
 
+                ),
+              ),
           ],
     ),
 
+    Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
 
 
 
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("tomato paste"),
+                  ),
+                ),
+
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 45),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("garlic"),
+                  ),
+                ),
+
+               
+
+              ],
+            ),
+
+          Padding(padding: EdgeInsets.only(top: 20, bottom: 10,left: 0,right: 0),
+                child: Container(
+                    height: 30,
+                    width: 300,
+                    // color: Colors.white,
+                    child: Text("Desserts",style: TextStyle(color: Colors.teal,fontSize: 25),)
+                )),
       ],
 
 
       ),
+          ),
         ],
     ),
     );
