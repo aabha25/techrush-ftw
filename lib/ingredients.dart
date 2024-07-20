@@ -31,14 +31,16 @@ class MyApp2 extends StatelessWidget{
                 height: 60,
                // color: Colors.grey,
 
-                child: Text("WHAT DO YOU HAVE ?",style: TextStyle(color: Colors.black,fontFamily: 'Times New Roman',fontSize: 30),))),
+                child: Text("WHAT DO YOU HAVE ?",style: TextStyle(color: Colors.black,fontFamily: 'Times New Roman',fontSize: 30),)
+                ),
+                ),
                 Padding(padding: EdgeInsets.only(top: 5, bottom: 10,left: 0,right: 0),
        child: Container(
           height: 60,
           width: 300,
          // color: Colors.white,
-          child: Text("Pantry essentials",style: TextStyle(color: Colors.teal,fontSize: 25),)
-        )),
+          child: Text("Pantry essentials",style: TextStyle(color: Color.fromARGB(255, 188, 32, 32),fontSize: 25),
+        ),),),
           Row(children: [
             Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -141,7 +143,7 @@ class MyApp2 extends StatelessWidget{
                     height: 30,
                     width: 300,
                     // color: Colors.white,
-                    child: Text("SAVORY",style: TextStyle(color: Colors.teal,fontSize: 25),)
+                    child: Text("SAVORY",style: TextStyle(color: Color.fromARGB(255, 188, 32, 32),fontSize: 25),)
                 )),
 
             Row(children: [
@@ -327,15 +329,168 @@ class MyApp2 extends StatelessWidget{
                     height: 30,
                     width: 300,
                     // color: Colors.white,
-                    child: Text("Desserts",style: TextStyle(color: Colors.teal,fontSize: 25),)
+                    child: Text("Desserts",style: TextStyle(color: Color.fromARGB(255, 188, 32, 32),fontSize: 25),)
                 )),
+          Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Container(
+                    height: 85,
+                    width: 70,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/cmilk.png"),
+                            fit: BoxFit.cover))
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 55),
+                child: Container(
+                    height: 85,
+                    width: 85,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/chocolate.png"),
+                            fit: BoxFit.cover))
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 50,right: 0),
+                child: Container(
+                    height: 85,
+                    width: 75,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/whipped.png"),
+                            fit: BoxFit.cover))
+
+                ),
+              ),
+
+              /*Padding(
+                padding: const EdgeInsets.only(left: 70,right: 0),
+                child: Container(
+                    height: 85,
+                    width: 70,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/butter.png"),
+                            fit: BoxFit.cover))
+
+                ),
+              ),
+         */
+
+
+            ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("condensed\n milk"),
+                  ),
+                ),
+
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("chocolate"),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left:15),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("whipped\n cream"),
+                  ),
+                ),
+
+              ],
+            ),
+            Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20 , top: 30),
+                child: Container(
+                    height: 90,
+                    width: 70,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/strawberry.png"),
+                            fit: BoxFit.cover))
+
+                ),
+              ),
+
+            ],
+              ),
+               Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: ElevatedButton(
+
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                    ),
+                    onPressed:(){
+                      child:Text("pressed");
+                    }, child: Text("strawberry"),
+                  ),
+                ),
+
+
+
+          
+
+               
+
+              ],
+            ),
+          ],
+    ),
+          ),         
       ],
 
 
       ),
-          ),
-        ],
-    ),
+          
+    
     );
   }
 }
