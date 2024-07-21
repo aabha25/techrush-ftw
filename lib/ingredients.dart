@@ -10,18 +10,18 @@ class MyApp2 extends StatefulWidget{
     return MyApp2State();
   }}
 class MyApp2State extends State<MyApp2>{
- bool salt =false;
- bool pepper =false;
- bool butter =false;
- bool cheese =false;
- bool pasta =false;
- bool bread =false;
- bool paste =false;
- bool garlic =false;
- bool cmilk=false;
- bool chocolate =false;
- bool whipped =false;
- bool strawberry =false;
+ bool salt =true;
+ bool pepper =true;
+ bool butter =true;
+ bool cheese =true;
+ bool pasta =true;
+ bool bread =true;
+ bool paste =true;
+ bool garlic =true;
+ bool cmilk=true;
+ bool chocolate =true;
+ bool whipped =true;
+ bool strawberry =true;
 
 
   Widget build(BuildContext context){
