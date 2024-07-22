@@ -41,12 +41,12 @@ class MyApp1State extends State<MyApp1> {
                       EdgeInsets.only(top: 40, bottom: 0, left: 30, right: 30),
                   child: Container(
                     width: 460,
-                    height: 632,
-                    //  color: Colors.redAccent,
-                    decoration: BoxDecoration(
+                    height: 602,
+                    color: Color.fromARGB(0, 0, 0, 0),
+                    /*decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/images/collage1.png"),
-                            fit: BoxFit.cover)),
+                            fit: BoxFit.cover)),*/
                   ),
                 ),
                 Container(
