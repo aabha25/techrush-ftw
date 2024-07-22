@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/material/colors.dart';
 import 'package:flutter/src/widgets/text.dart';
+import 'package:hackathonproject/recipecard.dart';
 
 class MyApp2 extends StatefulWidget{
 
@@ -10,18 +11,18 @@ class MyApp2 extends StatefulWidget{
     return MyApp2State();
   }}
 class MyApp2State extends State<MyApp2>{
- bool salt =true;
- bool pepper =true;
- bool butter =true;
- bool cheese =true;
- bool pasta =true;
- bool bread =true;
- bool paste =true;
- bool garlic =true;
- bool cmilk=true;
- bool chocolate =true;
- bool whipped =true;
- bool strawberry =true;
+  static bool salt =true;
+ static bool pepper =true;
+ static bool butter =true;
+ static bool cheese =true;
+ static bool pasta =true;
+ static bool bread =true;
+ static bool paste =true;
+ static bool garlic =true;
+ static bool cmilk=true;
+ static bool chocolate =true;
+ static bool whipped =true;
+ static bool strawberry =true;
 
 
   Widget build(BuildContext context){
@@ -643,7 +644,8 @@ class MyApp2State extends State<MyApp2>{
 
                             // ),
                             onPressed:(){
-
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) => MyApp3()));
                               child:Text("pressed");
                             }, child: Text("FIND YOUR RECIPE !",
                                   style: TextStyle(color: Color.fromARGB(255, 167, 24, 24)),
