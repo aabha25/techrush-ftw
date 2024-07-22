@@ -620,6 +620,46 @@ class MyApp2State extends State<MyApp2>{
 
                   ],
                 ),
+
+
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+
+
+
+
+                         Padding(
+                          padding: const EdgeInsets.only(left: 230,bottom: 10),
+                          child: ElevatedButton(
+                            style:ElevatedButton.styleFrom(
+                                backgroundColor: Color.fromARGB(255, 255, 100, 100)
+
+
+                            ),
+                            // style: ButtonStyle(
+                            //backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255,241,170,170)),
+
+                            // ),
+                            onPressed:(){
+
+                              child:Text("pressed");
+                            }, child: Text("FIND YOUR RECIPE !",
+                                  style: TextStyle(color: Color.fromARGB(255, 167, 24, 24)),
+                          ),
+                          ),
+                        ),
+
+
+
+
+
+
+
+                    ],
+                  ),
+
               ],
             ),
           ),
